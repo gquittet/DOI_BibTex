@@ -1,0 +1,25 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[scripts]
+start = "python src/main.py"
+format = "black src/main.py"
+lint = "pylint src/main.py"
+bundle = "pyinstaller -w --onefile --name DOI_BibTex src/main.py"
+
+[packages]
+requests = "*"
+pyperclip = "*"
+
+[dev-packages]
+black = "*"
+pyinstaller = "*"
+pylint = "*"
+
+[requires]
+python_version = "3.9"
+
+[pipenv]
+allow_prereleases = true
