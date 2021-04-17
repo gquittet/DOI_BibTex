@@ -20,30 +20,29 @@
 
 ---
 
-
-
-
 ## Requirements
 
 ✔️ Compiler : Python 3.9
 
-#### Pip install
+✔️ Package Manager : PipEnv
+
+## Install dependencies
 
 ```bash
-pip install requests calendar pyperclip
+pipenv sync
 ```
 
-## Utilisation
+## Use
 
 This script directly retrieves the metadata of an article using the API of www.doi.org
 
 Just start the script and paste the url when asked
 Once the script is finished, the text is copied directly into the clipboard
 
-### Output : 
+### Output
 
 ```bash
-D:\>python -u main.py
+$ pipenv run start
 Enter DOI Number Only URL
 https://doi.org/10.1145/1376616.1376723
 [INFO - 17/04/2021 19:00:22] : Wait for DOI Lookup
@@ -61,4 +60,11 @@ howpublished={\url{http://dx.doi.org/10.1145/1376616.1376723} },
 month={juin},
 year={2008},
 note={ [En Ligne] - consulté le 17 avril 2021 }}
+```
+
+### Bundle to an excecutable
+
+```bash
+$ pipenv run bundle
+# It generate only for your platform (Windows/macOS/Linux) in dist/DOI_BibTex
 ```
