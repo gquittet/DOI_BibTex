@@ -14,11 +14,11 @@ def Logger(level,message):
 def BibTexGenerator(json):
     ## URL
     URL ="howpublished={\\url{"+ JSON_LOAD['URL']+ "} },"
-    
-    ### Author  
+
+    ### Author
     AUTHORS = " and ".join([f"{author['family']}{','} {author['given']}" for author in JSON_LOAD["author"]])
     AUTHORS = "author={"+AUTHORS+"},"
-    
+
     ### Title
     TITLE = "title={"+JSON_LOAD['title']+"},"
 
